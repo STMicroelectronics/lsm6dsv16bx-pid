@@ -3663,10 +3663,10 @@ int32_t lsm6dsv16bx_mlc_data_rate_get(stmdev_ctx_t *ctx,
 
 typedef struct
 {
-  lsm6dsv16bx_mlc1_src_t mlc1_src;
-  lsm6dsv16bx_mlc2_src_t mlc2_src;
-  lsm6dsv16bx_mlc3_src_t mlc3_src;
-  lsm6dsv16bx_mlc4_src_t mlc4_src;
+  uint8_t mlc1_src;
+  uint8_t mlc2_src;
+  uint8_t mlc3_src;
+  uint8_t mlc4_src;
 } lsm6dsv16bx_mlc_out_t;
 int32_t lsm6dsv16bx_mlc_out_get(stmdev_ctx_t *ctx, lsm6dsv16bx_mlc_out_t *val);
 
