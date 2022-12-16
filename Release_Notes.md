@@ -30,7 +30,7 @@ This directory contains the LSM6DSV16BX component drivers.
 # Update history
 
 ::: {.collapse}
-<input type="checkbox" id="collapse-section1" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section1" aria-hidden="true">
 <label for="collapse-section1" aria-hidden="true">V1.0.0 / 03-Aug-2022</label>
 <div>			
 
@@ -39,6 +39,20 @@ This directory contains the LSM6DSV16BX component drivers.
 ### First release
 
 - First official release [ref. DS v2.0]
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section1" checked aria-hidden="true">
+<label for="collapse-section1" aria-hidden="true">V1.1.0 / 16-Dic-2022</label>
+<div>
+
+## Main changes
+
+### New release
+
+- New release [ref. DS v3.0]
 
 ##
 

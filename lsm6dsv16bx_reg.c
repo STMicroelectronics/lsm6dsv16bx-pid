@@ -1871,7 +1871,7 @@ int32_t lsm6dsv16bx_filt_gy_lp1_bandwidth_set(stmdev_ctx_t *ctx,
   ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL6, (uint8_t *)&ctrl6, 1);
   if (ret == 0)
   {
-    ctrl6.lpf1_g_bw = (uint8_t)val & 0xFU;
+    ctrl6.lpf1_g_bw = (uint8_t)val & 0x7U;
     ret = lsm6dsv16bx_write_reg(ctx, LSM6DSV16BX_CTRL6, (uint8_t *)&ctrl6, 1);
   }
 
@@ -5927,76 +5927,6 @@ int32_t lsm6dsv16bx_fifo_mlc_filt_batch_get(stmdev_ctx_t *ctx, uint8_t *val)
 
   ret += lsm6dsv16bx_mem_bank_set(ctx, LSM6DSV16BX_MAIN_MEM_BANK);
 
-  return ret;
-}
-
-/**
-  * @}
-  *
-  */
-
-/**
-  * @defgroup  Data ENable (DEN) functionality
-  * @brief     This section groups all the functions concerning
-  *            DEN functionality.
-  * @{
-  *
-  */
-
-/**
-  * @brief  It changes the polarity of INT2 pin input trigger for data enable (DEN) or embedded functions.[set]
-  *
-  * @param  ctx      read / write interface definitions
-  * @param  val      DEN_ACT_LOW, DEN_ACT_HIGH,
-  * @retval          interface status (MANDATORY: return 0 -> no Error)
-  *
-  */
-int32_t lsm6dsv16bx_den_polarity_set(stmdev_ctx_t *ctx,
-                                     lsm6dsv16bx_den_polarity_t val)
-{
-  lsm6dsv16bx_ctrl4_t ctrl4;
-  int32_t ret;
-
-  ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL4, (uint8_t *)&ctrl4, 1);
-
-  if (ret == 0)
-  {
-    ctrl4.int2_in_lh = (uint8_t)val & 0x1U;
-    ret = lsm6dsv16bx_write_reg(ctx, LSM6DSV16BX_CTRL4, (uint8_t *)&ctrl4, 1);
-  }
-
-  return ret;
-}
-
-/**
-  * @brief  It changes the polarity of INT2 pin input trigger for data enable (DEN) or embedded functions.[get]
-  *
-  * @param  ctx      read / write interface definitions
-  * @param  val      DEN_ACT_LOW, DEN_ACT_HIGH,
-  * @retval          interface status (MANDATORY: return 0 -> no Error)
-  *
-  */
-int32_t lsm6dsv16bx_den_polarity_get(stmdev_ctx_t *ctx,
-                                     lsm6dsv16bx_den_polarity_t *val)
-{
-  lsm6dsv16bx_ctrl4_t ctrl4;
-  int32_t ret;
-
-  ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL4, (uint8_t *)&ctrl4, 1);
-  switch (ctrl4.int2_in_lh)
-  {
-    case LSM6DSV16BX_DEN_ACT_LOW:
-      *val = LSM6DSV16BX_DEN_ACT_LOW;
-      break;
-
-    case LSM6DSV16BX_DEN_ACT_HIGH:
-      *val = LSM6DSV16BX_DEN_ACT_HIGH;
-      break;
-
-    default:
-      *val = LSM6DSV16BX_DEN_ACT_LOW;
-      break;
-  }
   return ret;
 }
 

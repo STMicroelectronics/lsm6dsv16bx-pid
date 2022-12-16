@@ -441,7 +441,7 @@ typedef struct
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t int2_in_lh                    : 1;
+  uint8_t not_used1                     : 1;
   uint8_t drdy_pulsed                   : 1;
   uint8_t int2_drdy_temp                : 1;
   uint8_t drdy_mask                     : 1;
@@ -453,7 +453,7 @@ typedef struct
   uint8_t drdy_mask                     : 1;
   uint8_t int2_drdy_temp                : 1;
   uint8_t drdy_pulsed                   : 1;
-  uint8_t int2_in_lh                    : 1;
+  uint8_t not_used1                     : 1;
 #endif /* DRV_BYTE_ORDER */
 } lsm6dsv16bx_ctrl4_t;
 
@@ -476,9 +476,11 @@ typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
   uint8_t fs_g                          : 4;
-  uint8_t lpf1_g_bw                     : 4;
+  uint8_t lpf1_g_bw                     : 3;
+  uint8_t not_used0                     : 1;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t lpf1_g_bw                     : 4;
+  uint8_t not_used0                     : 1;
+  uint8_t lpf1_g_bw                     : 3;
   uint8_t fs_g                          : 4;
 #endif /* DRV_BYTE_ORDER */
 } lsm6dsv16bx_ctrl6_t;
@@ -3496,16 +3498,6 @@ int32_t lsm6dsv16bx_fifo_mlc_batch_get(stmdev_ctx_t *ctx, uint8_t *val);
 
 int32_t lsm6dsv16bx_fifo_mlc_filt_batch_set(stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv16bx_fifo_mlc_filt_batch_get(stmdev_ctx_t *ctx, uint8_t *val);
-
-typedef enum
-{
-  LSM6DSV16BX_DEN_ACT_LOW                         = 0x0,
-  LSM6DSV16BX_DEN_ACT_HIGH                        = 0x1,
-} lsm6dsv16bx_den_polarity_t;
-int32_t lsm6dsv16bx_den_polarity_set(stmdev_ctx_t *ctx,
-                                     lsm6dsv16bx_den_polarity_t val);
-int32_t lsm6dsv16bx_den_polarity_get(stmdev_ctx_t *ctx,
-                                     lsm6dsv16bx_den_polarity_t *val);
 
 typedef struct
 {
