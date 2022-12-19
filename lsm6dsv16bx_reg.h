@@ -3630,13 +3630,12 @@ int32_t lsm6dsv16bx_fsm_start_address_get(stmdev_ctx_t *ctx, uint16_t *val);
 
 typedef enum
 {
-  LSM6DSV16BX_DISABLE                             = 0x0,
-  LSM6DSV16BX_MLC_BEFORE_FSM                      = 0x1,
-  LSM6DSV16BX_MLC_AFTER_FSM                       = 0x2,
+  LSM6DSV16BX_MLC_OFF                             = 0x0,
+  LSM6DSV16BX_MLC_ON                              = 0x1,
+  LSM6DSV16BX_MLC_ON_BEFORE_FSM                   = 0x2,
 } lsm6dsv16bx_mlc_mode_t;
-int32_t lsm6dsv16bx_mlc_mode_set(stmdev_ctx_t *ctx, lsm6dsv16bx_mlc_mode_t val);
-int32_t lsm6dsv16bx_mlc_mode_get(stmdev_ctx_t *ctx,
-                                 lsm6dsv16bx_mlc_mode_t *val);
+int32_t lsm6dsv16bx_mlc_set(stmdev_ctx_t *ctx, lsm6dsv16bx_mlc_mode_t val);
+int32_t lsm6dsv16bx_mlc_get(stmdev_ctx_t *ctx, lsm6dsv16bx_mlc_mode_t *val);
 
 typedef enum
 {
