@@ -32,7 +32,7 @@ This directory contains the LSM6DSV16BX component drivers.
 ::: {.collapse}
 <input type="checkbox" id="collapse-section1" aria-hidden="true">
 <label for="collapse-section1" aria-hidden="true">V1.0.0 / 03-Aug-2022</label>
-<div>			
+<div>
 
 ## Main changes
 
@@ -44,15 +44,26 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section1" checked aria-hidden="true">
-<label for="collapse-section1" aria-hidden="true">V1.1.0 / 16-Dic-2022</label>
+<input type="checkbox" id="collapse-section2" aria-hidden="true">
+<label for="collapse-section2" aria-hidden="true">V2.0.0 / 16-Dic-2022</label>
 <div>
 
 ## Main changes
 
-### New release
-
 - New release [ref. DS v3.0]
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section3" checked aria-hidden="true">
+<label for="collapse-section3" aria-hidden="true">V2.1.0 / 01-June-2023</label>
+<div>
+
+## Main changes
+
+- Add __weak directive to read/write registers routines
+- Fix LSM6DSV16BX_MLC_ON_BEFORE_FSM usage and APIs
 
 ##
 
