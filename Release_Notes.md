@@ -56,7 +56,7 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section3" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section3" aria-hidden="true">
 <label for="collapse-section3" aria-hidden="true">V2.1.0 / 01-June-2023</label>
 <div>
 
@@ -64,6 +64,18 @@ This directory contains the LSM6DSV16BX component drivers.
 
 - Add __weak directive to read/write registers routines
 - Fix LSM6DSV16BX_MLC_ON_BEFORE_FSM usage and APIs
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section4" checked aria-hidden="true">
+<label for="collapse-section4" aria-hidden="true">V2.1.1 / 25-July-2023</label>
+<div>
+
+## Main changes
+
+- Fix gyro FS 4000dps value typo error
 
 ##
 
