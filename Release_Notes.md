@@ -69,13 +69,25 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section4" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section4" aria-hidden="true">
 <label for="collapse-section4" aria-hidden="true">V2.1.1 / 25-July-2023</label>
 <div>
 
 ## Main changes
 
 - Fix gyro FS 4000dps value typo error
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section5" checked aria-hidden="true">
+<label for="collapse-section5" aria-hidden="true">V2.1.2 / 25-July-2023</label>
+<div>
+
+## Main changes
+
+- ah_qvar: Add API to convert from LSB to mV
 
 ##
 
