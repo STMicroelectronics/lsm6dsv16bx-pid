@@ -2695,11 +2695,10 @@ int32_t lsm6dsv16bx_xl_data_rate_get(stmdev_ctx_t *ctx,
 typedef enum
 {
   LSM6DSV16BX_XL_HIGH_PERFORMANCE_MD              = 0x0,
-  LSM6DSV16BX_XL_HIGH_ACCURANCY_ODR_MD            = 0x1,
+  LSM6DSV16BX_XL_HIGH_PERFORMANCE_TDM_MD          = 0x2,
   LSM6DSV16BX_XL_LOW_POWER_2_AVG_MD               = 0x4,
   LSM6DSV16BX_XL_LOW_POWER_4_AVG_MD               = 0x5,
   LSM6DSV16BX_XL_LOW_POWER_8_AVG_MD               = 0x6,
-  LSM6DSV16BX_XL_NORMAL_MD                        = 0x7,
 } lsm6dsv16bx_xl_mode_t;
 int32_t lsm6dsv16bx_xl_mode_set(stmdev_ctx_t *ctx, lsm6dsv16bx_xl_mode_t val);
 int32_t lsm6dsv16bx_xl_mode_get(stmdev_ctx_t *ctx, lsm6dsv16bx_xl_mode_t *val);
@@ -2727,7 +2726,6 @@ int32_t lsm6dsv16bx_gy_data_rate_get(stmdev_ctx_t *ctx,
 typedef enum
 {
   LSM6DSV16BX_GY_HIGH_PERFORMANCE_MD              = 0x0,
-  LSM6DSV16BX_GY_HIGH_ACCURANCY_ODR_MD            = 0x1,
   LSM6DSV16BX_GY_SLEEP_MD                         = 0x4,
   LSM6DSV16BX_GY_LOW_POWER_MD                     = 0x5,
 } lsm6dsv16bx_gy_mode_t;

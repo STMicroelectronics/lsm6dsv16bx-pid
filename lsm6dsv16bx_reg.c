@@ -491,8 +491,8 @@ int32_t lsm6dsv16bx_xl_mode_get(stmdev_ctx_t *ctx, lsm6dsv16bx_xl_mode_t *val)
       *val = LSM6DSV16BX_XL_HIGH_PERFORMANCE_MD;
       break;
 
-    case LSM6DSV16BX_XL_HIGH_ACCURANCY_ODR_MD:
-      *val = LSM6DSV16BX_XL_HIGH_ACCURANCY_ODR_MD;
+    case LSM6DSV16BX_XL_HIGH_PERFORMANCE_TDM_MD:
+      *val = LSM6DSV16BX_XL_HIGH_PERFORMANCE_TDM_MD;
       break;
 
     case LSM6DSV16BX_XL_LOW_POWER_2_AVG_MD:
@@ -505,10 +505,6 @@ int32_t lsm6dsv16bx_xl_mode_get(stmdev_ctx_t *ctx, lsm6dsv16bx_xl_mode_t *val)
 
     case LSM6DSV16BX_XL_LOW_POWER_8_AVG_MD:
       *val = LSM6DSV16BX_XL_LOW_POWER_8_AVG_MD;
-      break;
-
-    case LSM6DSV16BX_XL_NORMAL_MD:
-      *val = LSM6DSV16BX_XL_NORMAL_MD;
       break;
 
     default:
@@ -657,10 +653,6 @@ int32_t lsm6dsv16bx_gy_mode_get(stmdev_ctx_t *ctx, lsm6dsv16bx_gy_mode_t *val)
   {
     case LSM6DSV16BX_GY_HIGH_PERFORMANCE_MD:
       *val = LSM6DSV16BX_GY_HIGH_PERFORMANCE_MD;
-      break;
-
-    case LSM6DSV16BX_GY_HIGH_ACCURANCY_ODR_MD:
-      *val = LSM6DSV16BX_GY_HIGH_ACCURANCY_ODR_MD;
       break;
 
     case LSM6DSV16BX_GY_SLEEP_MD:
