@@ -6836,26 +6836,6 @@ int32_t lsm6dsv16bx_fsm_permission_set(stmdev_ctx_t *ctx,
 }
 
 /**
-  * @brief  Return the status of the CTRL registers permission (standard interface vs FSM).[get]
-  *
-  * @param  ctx      read / write interface definitions
-  * @param  val      0: all FSM regs are under std_if control, 1: some regs are under FSM control.
-  * @retval          interface status (MANDATORY: return 0 -> no Error)
-  *
-  */
-int32_t lsm6dsv16bx_fsm_permission_status_get(stmdev_ctx_t *ctx,
-                                              lsm6dsv16bx_fsm_permission_status_t *val)
-{
-  lsm6dsv16bx_ctrl_status_t status;
-  int32_t ret;
-
-  ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL_STATUS, (uint8_t *)&status, 1);
-  *val = (status.fsm_wr_ctrl_status == 0) ? LSM6DSV16BX_STD_IF_CONTROL : LSM6DSV16BX_FSM_CONTROL;
-
-  return ret;
-}
-
-/**
   * @brief  Enables the control of the CTRL registers to FSM (FSM can change some configurations of the device autonomously).[get]
   *
   * @param  ctx      read / write interface definitions
@@ -6888,21 +6868,21 @@ int32_t lsm6dsv16bx_fsm_permission_get(stmdev_ctx_t *ctx,
 }
 
 /**
-  * @brief  Get the FSM permission status
+  * @brief  Return the status of the CTRL registers permission (standard interface vs FSM).[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      0: All reg writable from std if - 1: some regs are under FSM control.
+  * @param  val      0: all FSM regs are under std_if control, 1: some regs are under FSM control.
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
-int32_t lsm6dsv16bx_fsm_permission_status(stmdev_ctx_t *ctx, uint8_t *val)
+int32_t lsm6dsv16bx_fsm_permission_status(stmdev_ctx_t *ctx,
+                                          lsm6dsv16bx_fsm_permission_status_t *val)
 {
-  lsm6dsv16bx_ctrl_status_t ctrl_status;
+  lsm6dsv16bx_ctrl_status_t status;
   int32_t ret;
 
-  ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL_STATUS, (uint8_t *)&ctrl_status, 1);
-
-  *val = ctrl_status.fsm_wr_ctrl_status;
+  ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL_STATUS, (uint8_t *)&status, 1);
+  *val = (status.fsm_wr_ctrl_status == 0) ? LSM6DSV16BX_STD_IF_CONTROL : LSM6DSV16BX_FSM_CONTROL;
 
   return ret;
 }

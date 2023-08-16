@@ -3576,15 +3576,14 @@ int32_t lsm6dsv16bx_fsm_permission_set(stmdev_ctx_t *ctx,
                                        lsm6dsv16bx_fsm_permission_t val);
 int32_t lsm6dsv16bx_fsm_permission_get(stmdev_ctx_t *ctx,
                                        lsm6dsv16bx_fsm_permission_t *val);
-int32_t lsm6dsv16bx_fsm_permission_status(stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef enum
 {
   LSM6DSV16BX_STD_IF_CONTROL                      = 0x0,
   LSM6DSV16BX_FSM_CONTROL                         = 0x1,
 } lsm6dsv16bx_fsm_permission_status_t;
-int32_t lsm6dsv16bx_fsm_permission_status_get(stmdev_ctx_t *ctx,
-                                              lsm6dsv16bx_fsm_permission_status_t *val);
+int32_t lsm6dsv16bx_fsm_permission_status(stmdev_ctx_t *ctx,
+                                          lsm6dsv16bx_fsm_permission_status_t *val);
 
 typedef struct
 {
