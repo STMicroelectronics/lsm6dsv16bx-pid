@@ -52,7 +52,10 @@ int32_t __weak lsm6dsv16bx_read_reg(const stmdev_ctx_t *ctx, uint8_t reg,
 {
   int32_t ret;
 
-  if (ctx == NULL) return -1;
+  if (ctx == NULL)
+  {
+    return -1;
+  }
 
   ret = ctx->read_reg(ctx->handle, reg, data, len);
 
@@ -75,7 +78,10 @@ int32_t __weak lsm6dsv16bx_write_reg(const stmdev_ctx_t *ctx, uint8_t reg,
 {
   int32_t ret;
 
-  if (ctx == NULL) return -1;
+  if (ctx == NULL)
+  {
+    return -1;
+  }
 
   ret = ctx->write_reg(ctx->handle, reg, data, len);
 
@@ -1254,7 +1260,8 @@ int32_t lsm6dsv16bx_all_sources_get(const stmdev_ctx_t *ctx,
   }
   if (ret == 0)
   {
-    ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_EMB_FUNC_EXEC_STATUS, (uint8_t *)&emb_func_exec_status, 1);
+    ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_EMB_FUNC_EXEC_STATUS, (uint8_t *)&emb_func_exec_status,
+                               1);
   }
   if (ret == 0)
   {
@@ -6124,11 +6131,13 @@ int32_t lsm6dsv16bx_stpcnt_debounce_set(const stmdev_ctx_t *ctx, uint8_t val)
   lsm6dsv16bx_pedo_deb_steps_conf_t pedo_deb_steps_conf;
   int32_t ret;
 
-  ret = lsm6dsv16bx_ln_pg_read(ctx, LSM6DSV16BX_PEDO_DEB_STEPS_CONF, (uint8_t *)&pedo_deb_steps_conf, 1);
+  ret = lsm6dsv16bx_ln_pg_read(ctx, LSM6DSV16BX_PEDO_DEB_STEPS_CONF, (uint8_t *)&pedo_deb_steps_conf,
+                               1);
   if (ret == 0)
   {
     pedo_deb_steps_conf.deb_step = val;
-    ret = lsm6dsv16bx_ln_pg_write(ctx, LSM6DSV16BX_PEDO_DEB_STEPS_CONF, (uint8_t *)&pedo_deb_steps_conf, 1);
+    ret = lsm6dsv16bx_ln_pg_write(ctx, LSM6DSV16BX_PEDO_DEB_STEPS_CONF, (uint8_t *)&pedo_deb_steps_conf,
+                                  1);
   }
 
   return ret;
@@ -6147,7 +6156,8 @@ int32_t lsm6dsv16bx_stpcnt_debounce_get(const stmdev_ctx_t *ctx, uint8_t *val)
   lsm6dsv16bx_pedo_deb_steps_conf_t pedo_deb_steps_conf;
   int32_t ret;
 
-  ret = lsm6dsv16bx_ln_pg_read(ctx, LSM6DSV16BX_PEDO_DEB_STEPS_CONF, (uint8_t *)&pedo_deb_steps_conf, 1);
+  ret = lsm6dsv16bx_ln_pg_read(ctx, LSM6DSV16BX_PEDO_DEB_STEPS_CONF, (uint8_t *)&pedo_deb_steps_conf,
+                               1);
   *val = pedo_deb_steps_conf.deb_step;
 
   return ret;
@@ -7302,7 +7312,7 @@ int32_t lsm6dsv16bx_mlc_set(const stmdev_ctx_t *ctx, lsm6dsv16bx_mlc_mode_t val)
     ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_EMB_FUNC_EN_A, (uint8_t *)&emb_en_a, 1);
     ret += lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_EMB_FUNC_EN_B, (uint8_t *)&emb_en_b, 1);
 
-    switch(val)
+    switch (val)
     {
       case LSM6DSV16BX_MLC_OFF:
         emb_en_a.mlc_before_fsm_en = 0;
