@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -1285,9 +1285,11 @@ typedef struct
   uint8_t emb_func_disable              : 1;
   uint8_t emb_func_irq_mask_xl_settl    : 1;
   uint8_t emb_func_irq_mask_g_settl     : 1;
-  uint8_t not_used1                     : 2;
+  uint8_t not_used1                     : 1;
+  uint8_t xl_dualc_batch_from_if        : 1;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t not_used1                     : 2;
+  uint8_t xl_dualc_batch_from_if        : 1;
+  uint8_t not_used1                     : 1;
   uint8_t emb_func_irq_mask_g_settl     : 1;
   uint8_t emb_func_irq_mask_xl_settl    : 1;
   uint8_t emb_func_disable              : 1;
