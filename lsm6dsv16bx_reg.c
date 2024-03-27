@@ -359,7 +359,7 @@ int32_t lsm6dsv16bx_device_id_get(const stmdev_ctx_t *ctx, uint8_t *val)
   * @brief  Accelerometer output data rate (ODR) selection.[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_ODR_OFF, XL_ODR_AT_1Hz875, XL_ODR_AT_7Hz5, XL_ODR_AT_15Hz, XL_ODR_AT_30Hz, XL_ODR_AT_60Hz, XL_ODR_AT_120Hz, XL_ODR_AT_240Hz, XL_ODR_AT_480Hz, XL_ODR_AT_960Hz, XL_ODR_AT_1920Hz, XL_ODR_AT_3840Hz, XL_ODR_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_xl_data_rate_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -383,7 +383,7 @@ int32_t lsm6dsv16bx_xl_data_rate_set(const stmdev_ctx_t *ctx,
   * @brief  Accelerometer output data rate (ODR) selection.[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_ODR_OFF, XL_ODR_AT_1Hz875, XL_ODR_AT_7Hz5, XL_ODR_AT_15Hz, XL_ODR_AT_30Hz, XL_ODR_AT_60Hz, XL_ODR_AT_120Hz, XL_ODR_AT_240Hz, XL_ODR_AT_480Hz, XL_ODR_AT_960Hz, XL_ODR_AT_1920Hz, XL_ODR_AT_3840Hz, XL_ODR_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_xl_data_rate_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -528,7 +528,7 @@ int32_t lsm6dsv16bx_xl_mode_get(const stmdev_ctx_t *ctx, lsm6dsv16bx_xl_mode_t *
   * @brief  Gyroscope output data rate (ODR) selection.[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      GY_ODR_OFF, GY_ODR_AT_7Hz5, GY_ODR_AT_15Hz, GY_ODR_AT_30Hz, GY_ODR_AT_60Hz, GY_ODR_AT_120Hz, GY_ODR_AT_240Hz, GY_ODR_AT_480Hz, GY_ODR_AT_960Hz, GY_ODR_AT_1920Hz, GY_ODR_AT_3840Hz, GY_ODR_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_gy_data_rate_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -553,7 +553,7 @@ int32_t lsm6dsv16bx_gy_data_rate_set(const stmdev_ctx_t *ctx,
   * @brief  Gyroscope output data rate (ODR) selection.[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      GY_ODR_OFF, GY_ODR_AT_7Hz5, GY_ODR_AT_15Hz, GY_ODR_AT_30Hz, GY_ODR_AT_60Hz, GY_ODR_AT_120Hz, GY_ODR_AT_240Hz, GY_ODR_AT_480Hz, GY_ODR_AT_960Hz, GY_ODR_AT_1920Hz, GY_ODR_AT_3840Hz, GY_ODR_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_gy_data_rate_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -5001,7 +5001,7 @@ int32_t lsm6dsv16bx_fifo_stop_on_wtm_get(const stmdev_ctx_t *ctx, uint8_t *val)
   * @brief  Selects Batch Data Rate (write frequency in FIFO) for accelerometer data.[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_NOT_BATCHED, XL_BATCHED_AT_1Hz875, XL_BATCHED_AT_7Hz5, XL_BATCHED_AT_15Hz, XL_BATCHED_AT_30Hz, XL_BATCHED_AT_60Hz, XL_BATCHED_AT_120Hz, XL_BATCHED_AT_240Hz, XL_BATCHED_AT_480Hz, XL_BATCHED_AT_960Hz, XL_BATCHED_AT_1920Hz, XL_BATCHED_AT_3840Hz, XL_BATCHED_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_fifo_xl_batch_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -5025,7 +5025,7 @@ int32_t lsm6dsv16bx_fifo_xl_batch_set(const stmdev_ctx_t *ctx,
   * @brief  Selects Batch Data Rate (write frequency in FIFO) for accelerometer data.[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_NOT_BATCHED, XL_BATCHED_AT_1Hz875, XL_BATCHED_AT_7Hz5, XL_BATCHED_AT_15Hz, XL_BATCHED_AT_30Hz, XL_BATCHED_AT_60Hz, XL_BATCHED_AT_120Hz, XL_BATCHED_AT_240Hz, XL_BATCHED_AT_480Hz, XL_BATCHED_AT_960Hz, XL_BATCHED_AT_1920Hz, XL_BATCHED_AT_3840Hz, XL_BATCHED_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_fifo_xl_batch_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -5101,7 +5101,7 @@ int32_t lsm6dsv16bx_fifo_xl_batch_get(const stmdev_ctx_t *ctx,
   * @brief  Selects Batch Data Rate (write frequency in FIFO) for gyroscope data.[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_NOT_BATCHED, XL_BATCHED_AT_1Hz875, XL_BATCHED_AT_7Hz5, XL_BATCHED_AT_15Hz, XL_BATCHED_AT_30Hz, XL_BATCHED_AT_60Hz, XL_BATCHED_AT_120Hz, XL_BATCHED_AT_240Hz, XL_BATCHED_AT_480Hz, XL_BATCHED_AT_960Hz, XL_BATCHED_AT_1920Hz, XL_BATCHED_AT_3840Hz, XL_BATCHED_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_fifo_gy_batch_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -5125,7 +5125,7 @@ int32_t lsm6dsv16bx_fifo_gy_batch_set(const stmdev_ctx_t *ctx,
   * @brief  Selects Batch Data Rate (write frequency in FIFO) for gyroscope data.[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_NOT_BATCHED, XL_BATCHED_AT_1Hz875, XL_BATCHED_AT_7Hz5, XL_BATCHED_AT_15Hz, XL_BATCHED_AT_30Hz, XL_BATCHED_AT_60Hz, XL_BATCHED_AT_120Hz, XL_BATCHED_AT_240Hz, XL_BATCHED_AT_480Hz, XL_BATCHED_AT_960Hz, XL_BATCHED_AT_1920Hz, XL_BATCHED_AT_3840Hz, XL_BATCHED_AT_7680Hz,
+  * @param  val      lsm6dsv16bx_fifo_gy_batch_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -5638,13 +5638,7 @@ int32_t lsm6dsv16bx_fifo_status_get(const stmdev_ctx_t *ctx,
   * @brief  FIFO data output[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      FIFO_EMPTY, GY_NC_TAG, XL_NC_TAG, TIMESTAMP_TAG,
-                     TEMPERATURE_TAG, CFG_CHANGE_TAG, XL_NC_T_2_TAG,
-                     XL_NC_T_1_TAG, XL_2XC_TAG, XL_3XC_TAG, GY_NC_T_2_TAG,
-                     GY_NC_T_1_TAG, GY_2XC_TAG, GY_3XC_TAG, STEP_COUNTER_TAG,
-                     SFLP_GAME_ROTATION_VECTOR_TAG, SFLP_GYROSCOPE_BIAS_TAG,
-                     SFLP_GRAVITY_VECTOR_TAG, MLC_RESULT_TAG,
-                     MLC_FILTER, MLC_FEATURE, XL_DUAL_CORE, AH_QVAR,
+  * @param  val      lsm6dsv16bx_fifo_out_raw_t enum
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
