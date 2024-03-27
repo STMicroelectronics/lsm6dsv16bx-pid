@@ -7599,7 +7599,7 @@ int32_t lsm6dsv16bx_xl_offset_on_out_get(const stmdev_ctx_t *ctx, uint8_t *val)
   *
   */
 int32_t lsm6dsv16bx_xl_offset_mg_set(const stmdev_ctx_t *ctx,
-                                     lsm6dsv16bxxl_offset_mg_t val)
+                                     lsm6dsv16bx_xl_offset_mg_t val)
 {
   lsm6dsv16bx_z_ofs_usr_t z_ofs_usr;
   lsm6dsv16bx_y_ofs_usr_t y_ofs_usr;
@@ -7689,7 +7689,7 @@ int32_t lsm6dsv16bx_xl_offset_mg_set(const stmdev_ctx_t *ctx,
   *
   */
 int32_t lsm6dsv16bx_xl_offset_mg_get(const stmdev_ctx_t *ctx,
-                                     lsm6dsv16bxxl_offset_mg_t *val)
+                                     lsm6dsv16bx_xl_offset_mg_t *val)
 {
   lsm6dsv16bx_z_ofs_usr_t z_ofs_usr;
   lsm6dsv16bx_y_ofs_usr_t y_ofs_usr;

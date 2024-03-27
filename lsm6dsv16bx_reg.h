@@ -3686,11 +3686,11 @@ typedef struct
   float_t z_mg;
   float_t y_mg;
   float_t x_mg;
-} lsm6dsv16bxxl_offset_mg_t;
+} lsm6dsv16bx_xl_offset_mg_t;
 int32_t lsm6dsv16bx_xl_offset_mg_set(const stmdev_ctx_t *ctx,
-                                     lsm6dsv16bxxl_offset_mg_t val);
+                                     lsm6dsv16bx_xl_offset_mg_t val);
 int32_t lsm6dsv16bx_xl_offset_mg_get(const stmdev_ctx_t *ctx,
-                                     lsm6dsv16bxxl_offset_mg_t *val);
+                                     lsm6dsv16bx_xl_offset_mg_t *val);
 
 typedef struct
 {
