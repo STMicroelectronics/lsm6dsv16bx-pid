@@ -106,7 +106,7 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section7" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section7" aria-hidden="true">
 <label for="collapse-section7" aria-hidden="true">V3.0.0 / 20-Mar-2024</label>
 <div>
 
@@ -114,6 +114,21 @@ This directory contains the LSM6DSV16BX component drivers.
 
 - Fixed code style (Artistic Style Version 3.4.13)
 - Add "const" to ctx arg for all APIs
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section8" checked aria-hidden="true">
+<label for="collapse-section8" aria-hidden="true">V3.1.0 / 28-Mar-2024</label>
+<div>
+
+## Main changes
+
+- updated README.md file with tag reference and mdelay description
+- Simplify few functions comment for readability
+- Fix typo on lsm6dsv16bx_xl_offset_mg_t struct name
+- Added xl_dualc_batch_from_if bit (DS Rev3)
 
 ##
 
