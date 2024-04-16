@@ -799,65 +799,65 @@ typedef struct
 #endif /* DRV_BYTE_ORDER */
 } lsm6dsv16bx_outx_h_a_t;
 
-#define LSM6DSV16BX_UI_OUTZ_L_A_OIS_DUALC         0x34U
+#define LSM6DSV16BX_UI_OUTZ_L_A_DUALC             0x34U
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t ui_outz_a_ois_dualc           : 8;
+  uint8_t ui_outz_a_dualc               : 8;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t ui_outz_a_ois_dualc           : 8;
+  uint8_t ui_outz_a_dualc               : 8;
 #endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_outz_l_a_ois_dualc_t;
+} lsm6dsv16bx_ui_outz_l_a_dualc_t;
 
-#define LSM6DSV16BX_UI_OUTZ_H_A_OIS_DUALC         0x35U
+#define LSM6DSV16BX_UI_OUTZ_H_A_DUALC             0x35U
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t ui_outz_a_ois_dualc           : 8;
+  uint8_t ui_outz_a_dualc               : 8;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t ui_outz_a_ois_dualc           : 8;
+  uint8_t ui_outz_a_dualc               : 8;
 #endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_outz_h_a_ois_dualc_t;
+} lsm6dsv16bx_ui_outz_h_a_dualc_t;
 
-#define LSM6DSV16BX_UI_OUTY_L_A_OIS_DUALC         0x36U
+#define LSM6DSV16BX_UI_OUTY_L_A_DUALC             0x36U
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t ui_outy_a_ois_dualc           : 8;
+  uint8_t ui_outy_a_dualc               : 8;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t ui_outy_a_ois_dualc           : 8;
+  uint8_t ui_outy_a_dualc               : 8;
 #endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_outy_l_a_ois_dualc_t;
+} lsm6dsv16bx_ui_outy_l_a_dualc_t;
 
-#define LSM6DSV16BX_UI_OUTY_H_A_OIS_DUALC         0x37U
+#define LSM6DSV16BX_UI_OUTY_H_A_DUALC             0x37U
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t ui_outy_a_ois_dualc           : 8;
+  uint8_t ui_outy_a_dualc               : 8;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t ui_outy_a_ois_dualc           : 8;
+  uint8_t ui_outy_a_dualc               : 8;
 #endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_outy_h_a_ois_dualc_t;
+} lsm6dsv16bx_ui_outy_h_a_dualc_t;
 
-#define LSM6DSV16BX_UI_OUTX_L_A_OIS_DUALC         0x38U
+#define LSM6DSV16BX_UI_OUTX_L_A_DUALC             0x38U
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t ui_outx_a_ois_dualc           : 8;
+  uint8_t ui_outx_a_dualc               : 8;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t ui_outx_a_ois_dualc           : 8;
+  uint8_t ui_outx_a_dualc               : 8;
 #endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_outx_l_a_ois_dualc_t;
+} lsm6dsv16bx_ui_outx_l_a_dualc_t;
 
-#define LSM6DSV16BX_UI_OUTX_H_A_OIS_DUALC         0x39U
+#define LSM6DSV16BX_UI_OUTX_H_A_DUALC             0x39U
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t ui_outx_a_ois_dualc           : 8;
+  uint8_t ui_outx_a_dualc               : 8;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t ui_outx_a_ois_dualc           : 8;
+  uint8_t ui_outx_a_dualc               : 8;
 #endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_outx_h_a_ois_dualc_t;
+} lsm6dsv16bx_ui_outx_h_a_dualc_t;
 
 #define LSM6DSV16BX_AH_QVAR_OUT_L                 0x3AU
 typedef struct
@@ -1352,24 +1352,6 @@ typedef struct
   uint8_t tdm_fs_xl                     : 2;
 #endif /* DRV_BYTE_ORDER */
 } lsm6dsv16bx_tdm_cfg2_t;
-
-#define LSM6DSV16BX_UI_INT_OIS                    0x6FU
-typedef struct
-{
-#if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t not_used0                     : 4;
-  uint8_t st_ois_clampdis               : 1;
-  uint8_t not_used1                     : 1;
-  uint8_t drdy_mask_ois                 : 1;
-  uint8_t int2_drdy_ois                 : 1;
-#elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t int2_drdy_ois                 : 1;
-  uint8_t drdy_mask_ois                 : 1;
-  uint8_t not_used1                     : 1;
-  uint8_t st_ois_clampdis               : 1;
-  uint8_t not_used0                     : 4;
-#endif /* DRV_BYTE_ORDER */
-} lsm6dsv16bx_ui_int_ois_t;
 
 #define LSM6DSV16BX_Z_OFS_USR                     0x73U
 typedef struct
@@ -2503,12 +2485,12 @@ typedef union
   lsm6dsv16bx_outy_h_a_t    outy_h_a;
   lsm6dsv16bx_outx_l_a_t    outx_l_a;
   lsm6dsv16bx_outx_h_a_t    outx_h_a;
-  lsm6dsv16bx_ui_outz_l_a_ois_dualc_t    ui_outz_l_a_ois_dualc;
-  lsm6dsv16bx_ui_outz_h_a_ois_dualc_t    ui_outz_h_a_ois_dualc;
-  lsm6dsv16bx_ui_outy_l_a_ois_dualc_t    ui_outy_l_a_ois_dualc;
-  lsm6dsv16bx_ui_outy_h_a_ois_dualc_t    ui_outy_h_a_ois_dualc;
-  lsm6dsv16bx_ui_outx_l_a_ois_dualc_t    ui_outx_l_a_ois_dualc;
-  lsm6dsv16bx_ui_outx_h_a_ois_dualc_t    ui_outx_h_a_ois_dualc;
+  lsm6dsv16bx_ui_outz_l_a_dualc_t    ui_outz_l_a_dualc;
+  lsm6dsv16bx_ui_outz_h_a_dualc_t    ui_outz_h_a_dualc;
+  lsm6dsv16bx_ui_outy_l_a_dualc_t    ui_outy_l_a_dualc;
+  lsm6dsv16bx_ui_outy_h_a_dualc_t    ui_outy_h_a_dualc;
+  lsm6dsv16bx_ui_outx_l_a_dualc_t    ui_outx_l_a_dualc;
+  lsm6dsv16bx_ui_outx_h_a_dualc_t    ui_outx_h_a_dualc;
   lsm6dsv16bx_ah_qvar_out_l_t    ah_qvar_out_l;
   lsm6dsv16bx_ah_qvar_out_h_t    ah_qvar_out_h;
   lsm6dsv16bx_timestamp0_t    timestamp0;
@@ -2539,7 +2521,6 @@ typedef union
   lsm6dsv16bx_tdm_cfg0_t    tdm_cfg0;
   lsm6dsv16bx_tdm_cfg1_t    tdm_cfg1;
   lsm6dsv16bx_tdm_cfg2_t    tdm_cfg2;
-  lsm6dsv16bx_ui_int_ois_t    ui_int_ois;
   lsm6dsv16bx_z_ofs_usr_t    z_ofs_usr;
   lsm6dsv16bx_y_ofs_usr_t    y_ofs_usr;
   lsm6dsv16bx_x_ofs_usr_t    x_ofs_usr;
@@ -2878,8 +2859,8 @@ int32_t lsm6dsv16bx_acceleration_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
 int32_t lsm6dsv16bx_dual_acceleration_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
-int32_t lsm6dsv16bx_ois_dual_acceleration_raw_get(const stmdev_ctx_t *ctx,
-                                                  int16_t *val);
+int32_t lsm6dsv16bx_dual_acceleration_raw_get(const stmdev_ctx_t *ctx,
+                                              int16_t *val);
 
 int32_t lsm6dsv16bx_ah_qvar_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
@@ -3074,7 +3055,6 @@ int32_t lsm6dsv16bx_pin_polarity_get(const stmdev_ctx_t *ctx,
 typedef struct
 {
   uint8_t boot                          : 1;
-  uint8_t drdy_ois                      : 1;
   uint8_t drdy_xl                       : 1;
   uint8_t drdy_gy                       : 1;
   uint8_t drdy_temp                     : 1;
@@ -3118,7 +3098,6 @@ int32_t lsm6dsv16bx_pin_int1_route_get(const stmdev_ctx_t *ctx,
 typedef struct
 {
   uint8_t boot                          : 1;
-  uint8_t drdy_ois                      : 1;
   uint8_t drdy_xl                       : 1;
   uint8_t drdy_gy                       : 1;
   uint8_t drdy_temp                     : 1;
@@ -3441,7 +3420,6 @@ typedef enum
 {
   LSM6DSV16BX_XL_BATCH_EVENT                      = 0x0,
   LSM6DSV16BX_GY_BATCH_EVENT                      = 0x1,
-  LSM6DSV16BX_GY_EIS_BATCH_EVENT                  = 0x2,
 } lsm6dsv16bx_fifo_batch_cnt_event_t;
 int32_t lsm6dsv16bx_fifo_batch_cnt_event_set(const stmdev_ctx_t *ctx,
                                              lsm6dsv16bx_fifo_batch_cnt_event_t val);
