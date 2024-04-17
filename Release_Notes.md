@@ -119,7 +119,7 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section8" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section8" aria-hidden="true">
 <label for="collapse-section8" aria-hidden="true">V3.1.0 / 28-Mar-2024</label>
 <div>
 
@@ -133,7 +133,22 @@ This directory contains the LSM6DSV16BX component drivers.
 ##
 
 </div>
+
+<input type="checkbox" id="collapse-section9" checked aria-hidden="true">
+<label for="collapse-section9" aria-hidden="true">V4.0.0 / 17-Apr-2024</label>
+<div>
+
+## Main changes
+
+- Rename xl_axis_set/get routines adding 'tdm'
+- Fixed few comments style and content
+- Remove usage of eis/ois from driver
+
+##
+
+</div>
 :::
+
 
 :::
 :::
