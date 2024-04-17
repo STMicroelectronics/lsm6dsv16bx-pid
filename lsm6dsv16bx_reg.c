@@ -460,7 +460,7 @@ int32_t lsm6dsv16bx_xl_data_rate_get(const stmdev_ctx_t *ctx,
   * @brief  Accelerometer operating mode selection.[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_HIGH_PERFORMANCE_MD, XL_HIGH_ACCURANCY_ODR_MD, XL_LOW_POWER_2_AVG_MD, XL_LOW_POWER_4_AVG_MD, XL_LOW_POWER_8_AVG_MD, XL_NORMAL_MD,
+  * @param  val      lsm6dsv16bx_xl_mode_t struct
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -484,7 +484,7 @@ int32_t lsm6dsv16bx_xl_mode_set(const stmdev_ctx_t *ctx, lsm6dsv16bx_xl_mode_t v
   * @brief  Accelerometer operating mode selection.[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      XL_HIGH_PERFORMANCE_MD, XL_HIGH_ACCURANCY_ODR_MD, XL_LOW_POWER_2_AVG_MD, XL_LOW_POWER_4_AVG_MD, XL_LOW_POWER_8_AVG_MD, XL_NORMAL_MD,
+  * @param  val      lsm6dsv16bx_xl_mode_t struct
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -7486,10 +7486,13 @@ int32_t lsm6dsv16bx_mlc_out_get(const stmdev_ctx_t *ctx, lsm6dsv16bx_mlc_out_t *
 }
 
 /**
-  * @brief  Qvar sensor sensitivity value register for the Machine Learning Core. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[set]
+  * @brief  Qvar sensor sensitivity value register for the Machine Learning Core.
+  *         This register corresponds to the conversion value of the Qvar sensor.
+  *         The register value is expressed as half-precision floating-point format:
+  *         SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      Qvar sensor sensitivity value register for the Machine Learning Core. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).
+  * @param  val      Qvar sensor sensitivity value register for the Machine Learning Core.
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -7506,10 +7509,13 @@ int32_t lsm6dsv16bx_mlc_qvar_sensitivity_set(const stmdev_ctx_t *ctx, uint16_t v
 }
 
 /**
-  * @brief  Qvar sensor sensitivity value register for the Machine Learning Core. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[get]
+  * @brief  Qvar sensor sensitivity value register for the Machine Learning Core.
+  *         This register corresponds to the conversion value of the Qvar sensor.
+  *         The register value is expressed as half-precision floating-point format:
+  *         SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      Qvar sensor sensitivity value register for the Machine Learning Core. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).
+  * @param  val      Qvar sensor sensitivity value register for the Machine Learning Core.
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -7731,10 +7737,12 @@ int32_t lsm6dsv16bx_xl_offset_mg_get(const stmdev_ctx_t *ctx,
   */
 
 /**
-  * @brief  Enables AH_QVAR chain. When this bit is set to ‘1’, the AH_QVAR buffers are connected to the SDx/Qvar1 and SCx/Qvar2 pins. Before setting this bit to 1, the accelerometer and gyroscope sensor have to be configured in power-down mode.[set]
+  * @brief  Enables AH_QVAR chain. When this bit is set to ‘1’, the AH_QVAR buffers are
+  *         connected to the AH1/Qvar1 and AH1/Qvar2 pins. Before setting this bit to 1,
+  *         the accelerometer and gyroscope sensor have to be configured in power-down mode.[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      Enables AH_QVAR chain. When this bit is set to ‘1’, the AH_QVAR buffers are connected to the SDx/Qvar1 and SCx/Qvar2 pins. Before setting this bit to 1, the accelerometer and gyroscope sensor have to be configured in power-down mode.
+  * @param  val      1: Enables AH_QVAR chain, 0: Disable the AH_QVAR chain
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -7774,10 +7782,12 @@ int32_t lsm6dsv16bx_ah_qvar_mode_set(const stmdev_ctx_t *ctx,
 }
 
 /**
-  * @brief  Enables AH_QVAR chain. When this bit is set to ‘1’, the AH_QVAR buffers are connected to the SDx/Qvar1 and SCx/Qvar2 pins. Before setting this bit to 1, the accelerometer and gyroscope sensor have to be configured in power-down mode.[get]
+  * @brief  Enables AH_QVAR chain. When this bit is set to ‘1’, the AH_QVAR buffers are
+  *         connected to the AH1/Qvar1 and AH1/Qvar2 pins. Before setting this bit to 1,
+  *         the accelerometer and gyroscope sensor have to be configured in power-down mode.[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      Enables AH_QVAR chain. When this bit is set to ‘1’, the AH_QVAR buffers are connected to the SDx/Qvar1 and SCx/Qvar2 pins. Before setting this bit to 1, the accelerometer and gyroscope sensor have to be configured in power-down mode.
+  * @param  val      1: Enables AH_QVAR chain, 0: Disable the AH_QVAR chain
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -7866,10 +7876,13 @@ int32_t lsm6dsv16bx_ah_qvar_zin_get(const stmdev_ctx_t *ctx,
 }
 
 /**
-  * @brief  Qvar sensor sensitivity value register for the Finite State Machine. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[set]
+  * @brief  Qvar sensor sensitivity value register for the Finite State Machine.
+  *         This register corresponds to the conversion value of the Qvar sensor.
+  *         The register value is expressed as half-precision floating-point format:
+  *         SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[set]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      Qvar sensor sensitivity value register for the Finite State Machine. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).
+  * @param  val      Qvar sensor sensitivity value register for the Finite State Machine.
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
@@ -7886,10 +7899,13 @@ int32_t lsm6dsv16bx_fsm_qvar_sensitivity_set(const stmdev_ctx_t *ctx, uint16_t v
 }
 
 /**
-  * @brief  Qvar sensor sensitivity value register for the Finite State Machine. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[get]
+  * @brief  Qvar sensor sensitivity value register for the Finite State Machine.
+  *         This register corresponds to the conversion value of the Qvar sensor.
+  *         The register value is expressed as half-precision floating-point format:
+  *         SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).[get]
   *
   * @param  ctx      read / write interface definitions
-  * @param  val      Qvar sensor sensitivity value register for the Finite State Machine. This register corresponds to the conversion value of the Qvar sensor. The register value is expressed as half-precision floating-point format: SEEEEEFFFFFFFFFF (S: 1 sign bit; E: 5 exponent bits; F: 10 fraction bits).
+  * @param  val      Qvar sensor sensitivity value register for the Finite State Machine.
   * @retval          interface status (MANDATORY: return 0 -> no Error)
   *
   */
