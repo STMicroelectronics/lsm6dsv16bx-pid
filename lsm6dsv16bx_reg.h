@@ -3089,54 +3089,15 @@ typedef struct
   uint8_t mlc2                          : 1;
   uint8_t mlc3                          : 1;
   uint8_t mlc4                          : 1;
-} lsm6dsv16bx_pin_int1_route_t;
+} lsm6dsv16bx_pin_int_route_t;
 int32_t lsm6dsv16bx_pin_int1_route_set(const stmdev_ctx_t *ctx,
-                                       lsm6dsv16bx_pin_int1_route_t val);
+                                       lsm6dsv16bx_pin_int_route_t val);
 int32_t lsm6dsv16bx_pin_int1_route_get(const stmdev_ctx_t *ctx,
-                                       lsm6dsv16bx_pin_int1_route_t *val);
-
-typedef struct
-{
-  uint8_t boot                          : 1;
-  uint8_t drdy_xl                       : 1;
-  uint8_t drdy_gy                       : 1;
-  uint8_t drdy_temp                     : 1;
-  uint8_t fifo_th                       : 1;
-  uint8_t fifo_ovr                      : 1;
-  uint8_t fifo_full                     : 1;
-  uint8_t fifo_bdr                      : 1;
-  uint8_t den_flag                      : 1;
-  uint8_t timestamp                     : 1; // impact on int2 signals
-  uint8_t six_d                         : 1;
-  uint8_t double_tap                    : 1;
-  uint8_t free_fall                     : 1;
-  uint8_t wake_up                       : 1;
-  uint8_t single_tap                    : 1;
-  uint8_t sleep_change                  : 1;
-  uint8_t sleep_status                  : 1;
-  uint8_t step_detector                 : 1;
-  uint8_t step_count_overflow           : 1;
-  uint8_t tilt                          : 1;
-  uint8_t sig_mot                       : 1;
-  uint8_t emb_func_stand_by             : 1; // impact on int2 signals
-  uint8_t fsm_lc                        : 1;
-  uint8_t fsm1                          : 1;
-  uint8_t fsm2                          : 1;
-  uint8_t fsm3                          : 1;
-  uint8_t fsm4                          : 1;
-  uint8_t fsm5                          : 1;
-  uint8_t fsm6                          : 1;
-  uint8_t fsm7                          : 1;
-  uint8_t fsm8                          : 1;
-  uint8_t mlc1                          : 1;
-  uint8_t mlc2                          : 1;
-  uint8_t mlc3                          : 1;
-  uint8_t mlc4                          : 1;
-} lsm6dsv16bx_pin_int2_route_t;
+                                       lsm6dsv16bx_pin_int_route_t *val);
 int32_t lsm6dsv16bx_pin_int2_route_set(const stmdev_ctx_t *ctx,
-                                       lsm6dsv16bx_pin_int2_route_t val);
+                                       lsm6dsv16bx_pin_int_route_t val);
 int32_t lsm6dsv16bx_pin_int2_route_get(const stmdev_ctx_t *ctx,
-                                       lsm6dsv16bx_pin_int2_route_t *val);
+                                       lsm6dsv16bx_pin_int_route_t *val);
 
 int32_t lsm6dsv16bx_pin_int_en_when_i2c_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv16bx_pin_int_en_when_i2c_get(const stmdev_ctx_t *ctx, uint8_t *val);
