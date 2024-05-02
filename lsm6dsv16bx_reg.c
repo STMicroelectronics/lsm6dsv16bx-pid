@@ -1291,6 +1291,7 @@ int32_t lsm6dsv16bx_flag_data_ready_get(const stmdev_ctx_t *ctx,
   val->drdy_xl = status.xlda;
   val->drdy_gy = status.gda;
   val->drdy_temp = status.tda;
+  val->drdy_ah_qvar = status.ah_qvarda;
 
   return ret;
 }
@@ -3255,6 +3256,7 @@ int32_t lsm6dsv16bx_pin_int2_route_set(const stmdev_ctx_t *ctx,
   lsm6dsv16bx_int2_ctrl_t int2_ctrl;
   lsm6dsv16bx_fsm_int2_t fsm_int2;
   lsm6dsv16bx_mlc_int2_t mlc_int2;
+  lsm6dsv16bx_ctrl7_t ctrl7;
   lsm6dsv16bx_md2_cfg_t md2_cfg;
   lsm6dsv16bx_ctrl4_t ctrl4;
   int32_t ret;
@@ -3344,6 +3346,13 @@ int32_t lsm6dsv16bx_pin_int2_route_set(const stmdev_ctx_t *ctx,
     int2_ctrl.int2_cnt_bdr = val.fifo_bdr;
     int2_ctrl.int2_emb_func_endop = val.emb_func_stand_by;
     ret = lsm6dsv16bx_write_reg(ctx, LSM6DSV16BX_INT2_CTRL, (uint8_t *)&int2_ctrl, 1);
+  }
+
+  if (ret == 0)
+  {
+    ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL7, (uint8_t *)&ctrl7, 1);
+    ctrl7.int2_drdy_ah_qvar = val.drdy_ah_qvar;
+    ret += lsm6dsv16bx_write_reg(ctx, LSM6DSV16BX_CTRL7, (uint8_t *)&ctrl7, 1);
   }
 
   if (ret == 0)
@@ -3462,6 +3471,7 @@ int32_t lsm6dsv16bx_pin_int2_route_get(const stmdev_ctx_t *ctx,
   lsm6dsv16bx_int2_ctrl_t int2_ctrl;
   lsm6dsv16bx_fsm_int2_t fsm_int2;
   lsm6dsv16bx_mlc_int2_t mlc_int2;
+  lsm6dsv16bx_ctrl7_t ctrl7;
   lsm6dsv16bx_md2_cfg_t md2_cfg;
   lsm6dsv16bx_ctrl4_t ctrl4;
   int32_t ret;
@@ -3500,6 +3510,11 @@ int32_t lsm6dsv16bx_pin_int2_route_get(const stmdev_ctx_t *ctx,
     val->fifo_bdr = int2_ctrl.int2_cnt_bdr;
   }
 
+  if (ret == 0)
+  {
+    ret = lsm6dsv16bx_read_reg(ctx, LSM6DSV16BX_CTRL7, (uint8_t *)&ctrl7, 1);
+    val->drdy_ah_qvar = ctrl7.int2_drdy_ah_qvar;
+  }
 
   if (ret == 0)
   {

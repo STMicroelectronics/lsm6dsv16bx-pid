@@ -2847,6 +2847,7 @@ typedef struct
   uint8_t drdy_xl                       : 1;
   uint8_t drdy_gy                       : 1;
   uint8_t drdy_temp                     : 1;
+  uint8_t drdy_ah_qvar                  : 1;
 } lsm6dsv16bx_data_ready_t;
 int32_t lsm6dsv16bx_flag_data_ready_get(const stmdev_ctx_t *ctx,
                                         lsm6dsv16bx_data_ready_t *val);
@@ -3058,6 +3059,7 @@ typedef struct
   uint8_t drdy_xl                       : 1;
   uint8_t drdy_gy                       : 1;
   uint8_t drdy_temp                     : 1;
+  uint8_t drdy_ah_qvar                  : 1;
   uint8_t fifo_th                       : 1;
   uint8_t fifo_ovr                      : 1;
   uint8_t fifo_full                     : 1;
