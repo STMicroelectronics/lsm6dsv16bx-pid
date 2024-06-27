@@ -148,7 +148,7 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section10" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section10" aria-hidden="true">
 <label for="collapse-section10" aria-hidden="true">V4.1.0 / 03-May-2024</label>
 <div>
 
@@ -157,6 +157,18 @@ This directory contains the LSM6DSV16BX component drivers.
 - add ah_qvar interrupt/event handling
 - Fix BDR counter regsters get/set APIs
 - unify pin_int1_route and pin_int2_route struct
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section11" checked aria-hidden="true">
+<label for="collapse-section11" aria-hidden="true">V5.0.0 / 23-Jun-2024</label>
+<div>
+
+## Main changes
+
+- Add defs for num_phy routines
 
 ##
 
