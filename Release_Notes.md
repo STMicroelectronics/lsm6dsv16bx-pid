@@ -174,13 +174,25 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section12" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section12" aria-hidden="true">
 <label for="collapse-section12" aria-hidden="true">V5.0.1 / 03-Oct-2024</label>
 <div>
 
 ## Main changes
 
 - Fix mlc_out_get API
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section13" checked aria-hidden="true">
+<label for="collapse-section13" aria-hidden="true">V5.0.2 / 07-Apr-2025</label>
+<div>
+
+## Main changes
+
+- Fixed TAP event related code
 
 ##
 
