@@ -30,90 +30,90 @@ This directory contains the LSM6DSV16BX component drivers.
 # Update history
 
 ::: {.collapse}
-<input type="checkbox" id="collapse-section1" aria-hidden="true">
-<label for="collapse-section1" aria-hidden="true">V1.0.0 / 03-Aug-2022</label>
+<input type="checkbox" id="collapse-section15" checked aria-hidden="true">
+<label for="collapse-section15" aria-hidden="true">V5.2.0 / 07-Oct-2025</label>
 <div>
 
 ## Main changes
 
-### First release
+- Added checks before writes and membank setting
+- Adding CODE_OF_CONDUCT.md and SECURITY.md
 
-- First official release [ref. DS v2.0]
+##
+
+</div>
+<input type="checkbox" id="collapse-section14" aria-hidden="true">
+<label for="collapse-section14" aria-hidden="true">V5.1.0 / 07-Jul-2025</label>
+<div>
+
+## Main changes
+
+- Fix driver formatting options
+- Added pointer to private data in stmdev_ctx_t
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section2" aria-hidden="true">
-<label for="collapse-section2" aria-hidden="true">V2.0.0 / 16-Dic-2022</label>
+<input type="checkbox" id="collapse-section13" aria-hidden="true">
+<label for="collapse-section13" aria-hidden="true">V5.0.2 / 07-Apr-2025</label>
 <div>
 
 ## Main changes
 
-- New release [ref. DS v3.0]
+- Fixed TAP event related code
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section3" aria-hidden="true">
-<label for="collapse-section3" aria-hidden="true">V2.1.0 / 01-June-2023</label>
+<input type="checkbox" id="collapse-section12" aria-hidden="true">
+<label for="collapse-section12" aria-hidden="true">V5.0.1 / 03-Oct-2024</label>
 <div>
 
 ## Main changes
 
-- Add __weak directive to read/write registers routines
-- Fix LSM6DSV16BX_MLC_ON_BEFORE_FSM usage and APIs
+- Fix mlc_out_get API
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section4" aria-hidden="true">
-<label for="collapse-section4" aria-hidden="true">V2.1.1 / 25-July-2023</label>
+<input type="checkbox" id="collapse-section11" aria-hidden="true">
+<label for="collapse-section11" aria-hidden="true">V5.0.0 / 23-Jun-2024</label>
 <div>
 
 ## Main changes
 
-- Fix gyro FS 4000dps value typo error
+- Add defs for num_phy routines
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section5" aria-hidden="true">
-<label for="collapse-section5" aria-hidden="true">V2.1.2 / 25-July-2023</label>
+<input type="checkbox" id="collapse-section10" aria-hidden="true">
+<label for="collapse-section10" aria-hidden="true">V4.1.0 / 03-May-2024</label>
 <div>
 
 ## Main changes
 
-- ah_qvar: Add API to convert from LSB to mV
+- add ah_qvar interrupt/event handling
+- Fix BDR counter regsters get/set APIs
+- unify pin_int1_route and pin_int2_route struct
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section6" aria-hidden="true">
-<label for="collapse-section6" aria-hidden="true">V2.2.0 / 09-Nov-2023</label>
+<input type="checkbox" id="collapse-section9" aria-hidden="true">
+<label for="collapse-section9" aria-hidden="true">V4.0.0 / 17-Apr-2024</label>
 <div>
 
 ## Main changes
 
-- Remove fsm_permission_status() API duplication
-- Fix xl_mode_t and gy_mode_t enumeration values
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section7" aria-hidden="true">
-<label for="collapse-section7" aria-hidden="true">V3.0.0 / 20-Mar-2024</label>
-<div>
-
-## Main changes
-
-- Fixed code style (Artistic Style Version 3.4.13)
-- Add "const" to ctx arg for all APIs
+- Rename xl_axis_set/get routines adding 'tdm'
+- Fixed few comments style and content
+- Remove usage of eis/ois from driver
 
 ##
 
@@ -134,95 +134,95 @@ This directory contains the LSM6DSV16BX component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section9" aria-hidden="true">
-<label for="collapse-section9" aria-hidden="true">V4.0.0 / 17-Apr-2024</label>
+<input type="checkbox" id="collapse-section7" aria-hidden="true">
+<label for="collapse-section7" aria-hidden="true">V3.0.0 / 20-Mar-2024</label>
 <div>
 
 ## Main changes
 
-- Rename xl_axis_set/get routines adding 'tdm'
-- Fixed few comments style and content
-- Remove usage of eis/ois from driver
+- Fixed code style (Artistic Style Version 3.4.13)
+- Add "const" to ctx arg for all APIs
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section10" aria-hidden="true">
-<label for="collapse-section10" aria-hidden="true">V4.1.0 / 03-May-2024</label>
+<input type="checkbox" id="collapse-section6" aria-hidden="true">
+<label for="collapse-section6" aria-hidden="true">V2.2.0 / 09-Nov-2023</label>
 <div>
 
 ## Main changes
 
-- add ah_qvar interrupt/event handling
-- Fix BDR counter regsters get/set APIs
-- unify pin_int1_route and pin_int2_route struct
+- Remove fsm_permission_status() API duplication
+- Fix xl_mode_t and gy_mode_t enumeration values
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section11" aria-hidden="true">
-<label for="collapse-section11" aria-hidden="true">V5.0.0 / 23-Jun-2024</label>
+<input type="checkbox" id="collapse-section5" aria-hidden="true">
+<label for="collapse-section5" aria-hidden="true">V2.1.2 / 25-July-2023</label>
 <div>
 
 ## Main changes
 
-- Add defs for num_phy routines
+- ah_qvar: Add API to convert from LSB to mV
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section12" aria-hidden="true">
-<label for="collapse-section12" aria-hidden="true">V5.0.1 / 03-Oct-2024</label>
+<input type="checkbox" id="collapse-section4" aria-hidden="true">
+<label for="collapse-section4" aria-hidden="true">V2.1.1 / 25-July-2023</label>
 <div>
 
 ## Main changes
 
-- Fix mlc_out_get API
+- Fix gyro FS 4000dps value typo error
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section13" aria-hidden="true">
-<label for="collapse-section13" aria-hidden="true">V5.0.2 / 07-Apr-2025</label>
+<input type="checkbox" id="collapse-section3" aria-hidden="true">
+<label for="collapse-section3" aria-hidden="true">V2.1.0 / 01-June-2023</label>
 <div>
 
 ## Main changes
 
-- Fixed TAP event related code
+- Add __weak directive to read/write registers routines
+- Fix LSM6DSV16BX_MLC_ON_BEFORE_FSM usage and APIs
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section14" aria-hidden="true">
-<label for="collapse-section14" aria-hidden="true">V5.1.0 / 07-Jul-2025</label>
+<input type="checkbox" id="collapse-section2" aria-hidden="true">
+<label for="collapse-section2" aria-hidden="true">V2.0.0 / 16-Dic-2022</label>
 <div>
 
 ## Main changes
 
-- Fix driver formatting options
-- Added pointer to private data in stmdev_ctx_t
+- New release [ref. DS v3.0]
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section15" checked aria-hidden="true">
-<label for="collapse-section15" aria-hidden="true">V5.2.0 / 07-Oct-2025</label>
+<input type="checkbox" id="collapse-section1" aria-hidden="true">
+<label for="collapse-section1" aria-hidden="true">V1.0.0 / 03-Aug-2022</label>
 <div>
 
 ## Main changes
 
-- Added checks before writes and membank setting
-- Adding CODE_OF_CONDUCT.md and SECURITY.md
+### First release
+
+- First official release [ref. DS v2.0]
 
 ##
 
 </div>
+
 :::
 
 
