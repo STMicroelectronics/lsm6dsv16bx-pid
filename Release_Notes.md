@@ -30,7 +30,21 @@ This directory contains the LSM6DSV16BX component drivers.
 # Update history
 
 ::: {.collapse}
-<input type="checkbox" id="collapse-section15" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section16" checked aria-hidden="true">
+<label for="collapse-section16" aria-hidden="true">V5.2.1 / 18-Mar-2026</label>
+<div>
+
+## Main changes
+
+- Revert: Split pin_int struct
+- Change switch cases to use hex values
+- Split pin_int_route struct into pin_int1_route and pin_int2_route
+- Re-order update history with most updated on top
+
+##
+
+</div>
+<input type="checkbox" id="collapse-section15" aria-hidden="true">
 <label for="collapse-section15" aria-hidden="true">V5.2.0 / 07-Oct-2025</label>
 <div>
 
