@@ -6115,11 +6115,11 @@ int32_t lsm6dsv16bx_fifo_out_raw_get(const stmdev_ctx_t *ctx,
       break;
 
     case 0x03:
-      val->tag = LSM6DSV16BX_TIMESTAMP_TAG;
+      val->tag = LSM6DSV16BX_TEMPERATURE_TAG;
       break;
 
     case 0x04:
-      val->tag = LSM6DSV16BX_TEMPERATURE_TAG;
+      val->tag = LSM6DSV16BX_TIMESTAMP_TAG;
       break;
 
     case 0x05:
