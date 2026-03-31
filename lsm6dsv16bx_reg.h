@@ -29,6 +29,7 @@ extern "C" {
 #include <stdint.h>
 #include <stddef.h>
 #include <math.h>
+#include <string.h>
 
 /** @addtogroup LSM6DSV16BX
   * @{
@@ -2871,8 +2872,6 @@ int32_t lsm6dsv16bx_acceleration_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
 int32_t lsm6dsv16bx_dual_acceleration_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
-int32_t lsm6dsv16bx_dual_acceleration_raw_get(const stmdev_ctx_t *ctx,
-                                              int16_t *val);
 
 int32_t lsm6dsv16bx_ah_qvar_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
@@ -3491,8 +3490,8 @@ int32_t lsm6dsv16bx_sigmot_mode_get(const stmdev_ctx_t *ctx, uint8_t *val);
 int32_t lsm6dsv16bx_tilt_mode_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv16bx_tilt_mode_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
-int32_t lsm6dsv16bx_sflp_game_rotation_set(const stmdev_ctx_t *ctx, uint16_t val);
-int32_t lsm6dsv16bx_sflp_game_rotation_get(const stmdev_ctx_t *ctx, uint16_t *val);
+int32_t lsm6dsv16bx_sflp_game_rotation_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv16bx_sflp_game_rotation_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef struct
 {
@@ -3501,7 +3500,7 @@ typedef struct
   float_t gbias_z; /* dps */
 } lsm6dsv16bx_sflp_gbias_t;
 int32_t lsm6dsv16bx_sflp_game_gbias_set(const stmdev_ctx_t *ctx,
-                                        lsm6dsv16bx_sflp_gbias_t *val);
+                                        const lsm6dsv16bx_sflp_gbias_t *val);
 
 int32_t lsm6dsv16bx_sflp_configure(const stmdev_ctx_t *ctx);
 
